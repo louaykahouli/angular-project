@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { AboutComponent } from './components/about/about.component';
 import { FeaturesComponent } from './components/features/features.component';
+import { ClassesComponent } from './components/classes/classes.component' 
+import { ContactComponent } from './components/contact/contact.component' 
+
 
 // Define the routes properly within the Routes array
 const routes: Routes = [
@@ -10,6 +13,9 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent },         // Home Route
   { path: 'about', component: AboutComponent },       // About Route
   { path: 'features', component: FeaturesComponent }, // Features Route
+  { path: 'classes', component:ClassesComponent},
+  { path: 'contact', component:ContactComponent},
+
   { path: '**', redirectTo: 'home' }                  // Wildcard Route (redirect to Home)
 ];
 
