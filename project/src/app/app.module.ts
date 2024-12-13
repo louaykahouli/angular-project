@@ -8,7 +8,7 @@ import { FeaturesComponent } from './components/features/features.component';
 import { HomeComponent } from './components/home/home.component';
 import { ClassesComponent } from './components/classes/classes.component';
 import { ContactComponent } from './components/contact/contact.component';
-
+import { ConnectComponent } from './components/connect/connect.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +16,8 @@ import { ContactComponent } from './components/contact/contact.component';
     FeaturesComponent,
     HomeComponent,
     ClassesComponent,
-    ContactComponent
+    ContactComponent,
+    ConnectComponent
   ],
   imports: [
     BrowserModule,

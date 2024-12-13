@@ -99,7 +99,11 @@
               "src/styles.css",
               "src/assets/css/style.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/js/main.js",
+              "src/assets/js/script.js"
+
+            ]
           }
         }
       }

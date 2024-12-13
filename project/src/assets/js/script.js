@@ -1,3 +1,21 @@
+const container = document.getElementById('container');
+const registerBtn = document.getElementById('register');
+const loginBtn = document.getElementById('login');
+
+registerBtn.addEventListener('click', () => {
+    container.classList.add("active");
+});
+
+loginBtn.addEventListener('click', () => {
+    container.classList.remove("active");
+});
+// script.js
+const addClientBtn = document.getElementById('add-client-button');
+
+addClientBtn.addEventListener('click', () => {
+    container.classList.add("active", "add-client");
+});
+
 (function ($) {
     "use strict";
     
@@ -32,22 +50,3 @@
         return false;
     });
 })(jQuery);
-const container = document.getElementById('container');
-const registerBtn = document.getElementById('register');
-const loginBtn = document.getElementById('login');
-
-registerBtn.addEventListener('click', () => {
-    container.classList.add("active");
-});
-
-loginBtn.addEventListener('click', () => {
-    container.classList.remove("active");
-});
-// script.js
-const addClientBtn = document.getElementById('add-client-button');
-
-addClientBtn.addEventListener('click', () => {
-    container.classList.add("active", "add-client");
-});
-
-
