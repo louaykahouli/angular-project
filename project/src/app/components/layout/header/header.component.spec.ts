@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConnectComponent } from './connect.component';
+import { HeaderComponent } from './header.component';
 
-describe('ConnectComponent', () => {
-  let component: ConnectComponent;
-  let fixture: ComponentFixture<ConnectComponent>;
+describe('HeaderComponent', () => {
+  let component: HeaderComponent;
+  let fixture: ComponentFixture<HeaderComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ConnectComponent]
+      declarations: [HeaderComponent]
     });
-    fixture = TestBed.createComponent(ConnectComponent);
+    fixture = TestBed.createComponent(HeaderComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -19,4 +19,3 @@ describe('ConnectComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-

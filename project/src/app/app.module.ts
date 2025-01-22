@@ -9,6 +9,8 @@ import { HomeComponent } from './components/home/home.component';
 import { ClassesComponent } from './components/classes/classes.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ConnectComponent } from './components/connect/connect.component';
+import { HeaderComponent } from './components/layout/header/header.component';
+import { FooterComponent } from './components/layout/footer/footer.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +19,9 @@ import { ConnectComponent } from './components/connect/connect.component';
     HomeComponent,
     ClassesComponent,
     ContactComponent,
-    ConnectComponent
+    ConnectComponent,
+    HeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

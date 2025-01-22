@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ConnectComponent } from './connect.component';
+import { FooterComponent } from './footer.component';
 
-describe('ConnectComponent', () => {
-  let component: ConnectComponent;
-  let fixture: ComponentFixture<ConnectComponent>;
+describe('FooterComponent', () => {
+  let component: FooterComponent;
+  let fixture: ComponentFixture<FooterComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [ConnectComponent]
+      declarations: [FooterComponent]
     });
-    fixture = TestBed.createComponent(ConnectComponent);
+    fixture = TestBed.createComponent(FooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
@@ -19,4 +19,3 @@ describe('ConnectComponent', () => {
     expect(component).toBeTruthy();
   });
 });
-
