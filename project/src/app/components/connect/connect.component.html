@@ -1,42 +1,44 @@
-
-<body>
-    <div class="container" id="container">
-        <div class="form-container sign-up">
-            <form action="" method="post">
-                <h1>Create Account</h1>
-                <input type="text" name="firstname" placeholder="First Name">
-                <input type="text" name="lastname" placeholder="Last Name">
-                <input type="email" name="email" placeholder="Email">
-                <input type="text" name="adress" placeholder="Address">
-                <input type="tel" name="number" placeholder="Number" pattern="[0-9]{8}">
-                <input type="password" name="password" placeholder="Password">
-                <button type="submit" name="register">Sign Up</button>
-            </form>
-        </div>
-        <div class="form-container sign-in">
-            <form action="" method="post">
-                <h1>Sign In</h1>
-                <input type="email" name="email" placeholder="Email">
-                <input type="password" name="password" placeholder="Password">
-                <button type="submit" name="login">Sign In</button>
-            </form>
-        </div>
-        <div class="toggle-container">
-            <div class="toggle">
-                <div class="toggle-panel toggle-left">
-                    <h1>Welcome Back!</h1>
-                    <p>Enter your personal details to use all of site features</p>
-                    <button class="hidden" id="login">Sign In</button>
-                </div>
-                <div class="toggle-panel toggle-right">
-                    <h1>Hello, Friend!</h1>
-                    <p>Register with your personal details to use all of site features</p>
-                    <button class="hidden" id="register">Sign Up</button>
-                </div>
-            </div>
-        </div>
+<div class="container" [class.active]="isActive">
+    <!-- Formulaire de Connexion (Sign In) -->
+    <div class="form-container sign-in">
+      <form (ngSubmit)="onSignIn()">
+        <h1>Sign In</h1>
+        <input type="email" [(ngModel)]="credentials.email" name="email" placeholder="Email" required>
+        <input type="password" [(ngModel)]="credentials.password" name="password" placeholder="Password" required>
+        <button type="submit">Sign In</button>
+        <div class="message">{{ message }}</div>
+      </form>
     </div>
-
-    <script src="script.js"></script>
-
-</body>
+  
+    <!-- Formulaire d'Inscription (Sign Up) -->
+    <div class="form-container sign-up">
+      <form (ngSubmit)="onSignUp()">
+        <h1>Create Account</h1>
+        <input type="text" [(ngModel)]="user.fullname" name="fullname" placeholder="Full Name" required>
+        <input type="text" [(ngModel)]="user.CIN" name="CIN" placeholder="CIN" required>
+        <input type="email" [(ngModel)]="user.email" name="email" placeholder="Email" required>
+        <input type="tel" [(ngModel)]="user.number" name="number" placeholder="Number" pattern="[0-9]{8}" required>
+        <input type="password" [(ngModel)]="user.password" name="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+        <div class="message">{{ message }}</div>
+      </form>
+    </div>
+  
+    <!-- Panneau de Bascule (Toggle) -->
+    <div class="toggle-container">
+      <div class="toggle">
+        <!-- Panneau de Connexion -->
+        <div class="toggle-panel toggle-left">
+          <h1>Welcome Back!</h1>
+          <p>Enter your personal details to use all site features</p>
+          <button class="hidden" (click)="toggleForm(false)">Sign In</button>
+        </div>
+        <!-- Panneau d'Inscription -->
+        <div class="toggle-panel toggle-right">
+          <h1>Hello, Friend!</h1>
+          <p>Register with your personal details to use all site features</p>
+          <button class="hidden" (click)="toggleForm(true)">Sign Up</button>
+        </div>
+      </div>
+    </div>
+  </div>

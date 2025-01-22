@@ -1,0 +1,9 @@
+<div class="form-container sign-in">
+    <form (ngSubmit)="onSubmit()">
+      <h1>Sign In</h1>
+      <input type="email" [(ngModel)]="credentials.email" name="email" placeholder="Email" required>
+      <input type="password" [(ngModel)]="credentials.password" name="password" placeholder="Password" required>
+      <button type="submit">Sign In</button>
+      <div class="message">{{ message }}</div>
+    </form>
+  </div>

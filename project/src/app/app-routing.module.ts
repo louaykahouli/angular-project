@@ -6,6 +6,8 @@ import { FeaturesComponent } from './components/features/features.component';
 import { ClassesComponent } from './components/classes/classes.component' 
 import { ContactComponent } from './components/contact/contact.component' 
 import { ConnectComponent } from './components/connect/connect.component';
+import { SignUpComponent } from './components/connect/sign-up/sign-up.component';
+import { SignInComponent } from './components/connect/sign-in/sign-in.component';
 // Define the routes properly within the Routes array
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' }, // Redirect base path to Home
@@ -15,7 +17,8 @@ const routes: Routes = [
   { path: 'classes', component:ClassesComponent},
   { path: 'contact', component:ContactComponent},
   { path: 'connect', component:ConnectComponent},
-
+  { path: 'sign-up', component: SignUpComponent },
+  { path: 'sign-in', component: SignInComponent },
 
   { path: '**', redirectTo: 'home' }                  // Wildcard Route (redirect to Home)
 ];
