@@ -13,6 +13,7 @@ import { HeaderComponent } from './components/layout/header/header.component';
 import { FooterComponent } from './components/layout/footer/footer.component';
 import { SignInComponent } from './components/connect/sign-in/sign-in.component';
 import { SignUpComponent } from './components/connect/sign-up/sign-up.component';
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,7 +31,8 @@ import { SignUpComponent } from './components/connect/sign-up/sign-up.component'
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule 
+    FormsModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
