@@ -15,8 +15,8 @@ router.post('/register', async (req, res) => {
     await user.save();
     res.status(201).json({ message: 'User registered successfully' });
   } catch (error) {
-    res.status(400).json({ message: 'Email or CIN already exists' });
-  }
+    console.error("Error during registration:", error); // Log the full error details
+    res.status(500).json({ message: 'Server error during registration', error: error.message });  }
 });
 
 // Connexion
