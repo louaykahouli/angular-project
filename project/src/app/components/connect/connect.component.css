@@ -17,17 +17,7 @@ body{
     justify-content: center;
     height: 100vh;
 }
-.logo-container {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    z-index: 1000; /* Ensure the logo is above other elements */
-  }
-  
-  .logo {
-    height: 50px; /* Adjust as needed */
-    width: auto; /* Maintain aspect ratio */
-  }
+
 .container{
     background-color: rgba(255, 255, 255, 0.2); /* Slightly transparent white */
 
