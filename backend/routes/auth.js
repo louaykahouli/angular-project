@@ -7,8 +7,9 @@ const router = express.Router();
 
 // Inscription
 router.post('/register', async (req, res) => {
+ 
   const { fullname, CIN, email, number, password } = req.body;
-
+ 
   try {
     const hashedPassword = await bcrypt.hash(password, 10);
     const user = new User({ fullname, CIN, email, number, password: hashedPassword });
